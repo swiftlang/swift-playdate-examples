@@ -14,14 +14,14 @@ Embedded Swift solves this problem by pairing high-level ergonomics with low-lev
 
 To start using Swift with the Playdate SDK, you can find guides, articles, and API documentation via the [Package's documentation on the Web][docs] or in Xcode.
 
-- [Exploring the Examples](https://apple.github.io/swift-playdate-examples/documentation/playdate/exploringtheexamples)
-- [Downloading the Tools](https://apple.github.io/swift-playdate-examples/documentation/playdate/downloadingthetools)
-- [Building the Examples](https://apple.github.io/swift-playdate-examples/documentation/playdate/buildingtheexamples)
-- [Creating Your Own Game](https://apple.github.io/swift-playdate-examples/documentation/playdate/creatingyourowngame)
+- [Exploring the Examples](https://swiftlang.github.io/swift-playdate-examples/documentation/playdate/exploringtheexamples)
+- [Downloading the Tools](https://swiftlang.github.io/swift-playdate-examples/documentation/playdate/downloadingthetools)
+- [Building the Examples](https://swiftlang.github.io/swift-playdate-examples/documentation/playdate/buildingtheexamples)
+- [Creating Your Own Game](https://swiftlang.github.io/swift-playdate-examples/documentation/playdate/creatingyourowngame)
 
 > Disclaimer: The examples included in this repository are not reference implementations for creating games.
 
-[docs]: https://apple.github.io/swift-playdate-examples/documentation/playdate
+[docs]: https://swiftlang.github.io/swift-playdate-examples/documentation/playdate
 
 ## Contributing to Swift Playdate Examples
 
@@ -29,9 +29,7 @@ This repo is intended to demonstrate use of Embedded Swift on different platform
 
 ### Code of Conduct
 
-Like all Swift.org projects, we would like the Swift Playdate Examples project to foster a diverse and friendly community. We expect contributors to adhere the [Swift.org Code of Conduct](https://swift.org/code-of-conduct/). A copy of this document is [available in this repository][coc].
-
-[coc]: CODE_OF_CONDUCT.md
+Like all Swift.org projects, we would like these Embedded Swift example projects to foster a diverse and friendly community. We expect contributors to adhere to the [Swift.org Code of Conduct](https://swift.org/code-of-conduct).
 
 ### Contact information
 
