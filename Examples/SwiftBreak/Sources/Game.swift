@@ -13,7 +13,7 @@ struct Sprites: ~Copyable {
   var ball: Sprite
   var paddle: Sprite
   var gameOver: Sprite
-  var bricks: FixedArray<Sprite>
+  var bricks: Slab<40, Sprite>
 }
 
 struct ActiveGame {
@@ -46,7 +46,7 @@ struct Game: ~Copyable {
         ball: .ball(),
         paddle: .paddle(),
         gameOver: .gameOver(),
-        bricks: .init(count: 40, first: brick) { $0.copy() })
+        bricks: .init(first: brick) { $0.copy() })
     Sprite.drawSprites()
     self.state = .loading
   }
@@ -125,13 +125,13 @@ extension Game {
 
     let brickWidth = 40
     let brickHeight = 24
-    sprites.bricks.enumerated { index, brick in
+    for index in sprites.bricks.indices {
       let x = (index % 10)
       let y = (index / 10)
-      brick.moveTo(
+      sprites.bricks[index].moveTo(
         x: Float(x * brickWidth + brickWidth / 2),
         y: Float(y * brickHeight + brickHeight / 2))
-      brick.addSprite()
+      sprites.bricks[index].addSprite()
     }
     activeGame.bricksRemaining = sprites.bricks.count
 
@@ -154,8 +154,8 @@ extension Game {
   mutating func gameOver() {
     self.sprites.ball.removeSprite()
     self.sprites.paddle.removeSprite()
-    self.sprites.bricks.forEach { brick in
-      brick.removeSprite()
+    for i in self.sprites.bricks.indices {
+      self.sprites.bricks[i].removeSprite()
     }
     self.sprites.gameOver.moveTo(
       x: Float(LCD_COLUMNS / 2),
